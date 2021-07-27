@@ -1,75 +1,56 @@
-# katana-challenge
-
-This application is generated using [LoopBack 4 CLI](https://loopback.io/doc/en/lb4/Command-line-interface.html) with the
-[initial project layout](https://loopback.io/doc/en/lb4/Loopback-application-layout.html).
-
-## Install dependencies
-
-By default, dependencies were installed when this application was generated.
-Whenever dependencies in `package.json` are changed, run the following command:
-
-```sh
-npm install
-```
-
-To only install resolved dependencies in `package-lock.json`:
-
-```sh
-npm ci
-```
+# api-deck-katana-challenge
 
 ## Run the application
 
-```sh
-npm start
-```
+> locally without docker
 
-You can also run `node .` to skip the build step.
+Make sure that you have node and npm installed =)
 
-Open http://127.0.0.1:3000 in your browser.
+    npm i
 
-## Rebuild the project
+After that just run
 
-To incrementally build the project:
+    npm run start
 
-```sh
-npm run build
-```
+> if you have docker
 
-To force a full build by cleaning up cached artifacts:
+Just run
 
-```sh
-npm run rebuild
-```
+    docker-compose up -d
 
-## Fix code style and formatting issues
+To access the swagger enter on http://localhost:3000/swagger
 
-```sh
-npm run lint
-```
+## Testing the application
 
-To automatically fix such issues:
+All test units and integration
 
-```sh
-npm run lint:fix
-```
+    npm run test
 
-## Other useful commands
 
-- `npm run migrate`: Migrate database schemas for models
-- `npm run openapi-spec`: Generate OpenAPI spec into a file
-- `npm run docker:build`: Build a Docker image for this application
-- `npm run docker:run`: Run this application inside a Docker container
+## Rational used
 
-## Tests
+For this project I din't persist it with relational database, in point of view this is a way to perform without it, just using the in-memory database.
+To get the application abstraction I prefer to put all the core on the domain layer as one of the best practice over the DDD (Domain Driven Design) this is one of the best way to get rich domain that you can change all the framework and you are guaranteed that the domain business core is not anemic and tightly coupled with any framework.
 
-```sh
-npm test
-```
+## Folder Structure
 
-## What's next
+This are folders that are outside of the framework
 
-Please check out [LoopBack 4 documentation](https://loopback.io/doc/en/lb4/) to
-understand how you can continue to add features to this application.
+    ./src
+       |- contracts // All the AJV contracts separed of the controller
+       |- domains // The heart of the application
+       |- exceptions // All exceptions for better control
 
-[![LoopBack](https://github.com/loopbackio/loopback-next/raw/master/docs/site/imgs/branding/Powered-by-LoopBack-Badge-(blue)-@2x.png)](http://loopback.io/)
+
+## Interesting thing on this project
+
+In this project I liked too much to make the domain class DecksCard.ts and the method makeCards has the  𝑂(𝑛²)  cause the suits enumeration segmentation.
+
+## If you would like to talk about it
+### Ernandes Leite de Almeida Guedes 😉 🤘
+
+jocker.soad@gmail.com
+
+[![Linkedin Badge](https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/ernandesguedes/)](https://www.linkedin.com/in/ernandesguedes/)
+
+![enter image description here](https://pt.gravatar.com/userimage/165757987/cdea54560bc35b433e6402b6d923bb9b.jpeg)
