@@ -29,7 +29,7 @@ All test units and integration
 
 ## Rational used
 
-For this project I din't persist it with relational database, in point of view this is a way to perform without it, just using the in-memory database.
+For this project I didn't persist it with a relational database, in point of view this is a way to perform without it, just using the in-memory database.
 To get the application abstraction I prefer to put all the core on the domain layer as one of the best practice over the DDD (Domain Driven Design) this is one of the best way to get rich domain that you can change all the framework and you are guaranteed that the domain business core is not anemic and tightly coupled with any framework.
 
 ## Folder Structure
@@ -42,9 +42,9 @@ This are folders that are outside of the framework
        |- exceptions // All exceptions for better control
 
 
-## Interesting thing on this project
+## An interesting thing on this project
 
-In this project I liked too much to make the domain class DecksCard.ts and the method makeCards has the  𝑂(𝑛²)  cause the suits enumeration segmentation.
+In this project I liked too much to make the domain class DecksCard.ts and the method makeCards has the  𝑂(𝑛²)  cause the suits enumeration segmentation. I took the liberty of creating an endpoint to shuffle, hehehe 🤓
 
 ## If you would like to talk about it
 ### Ernandes Leite de Almeida Guedes 😉 🤘
